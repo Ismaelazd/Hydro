@@ -5,6 +5,13 @@
  */
 
 require('./bootstrap');
+require('jquery');
+require('jquery-easing');
+require('popper.js')
+require('magnific-popup');
+require('jquery.stellar/jquery.stellar');
+require('./smoothscroll');
+require('./custom');
 
 window.Vue = require('vue');
 
