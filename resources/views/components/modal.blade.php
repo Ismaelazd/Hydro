@@ -68,11 +68,21 @@
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                    <form action="#" method="post">
-                                        <input type="email" class="form-control" name="email" placeholder="Email"
-                                            required>
-                                        <input type="password" class="form-control" name="password"
-                                            placeholder="Password" required>
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus name="email" placeholder="Email">
+                                        @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"
+                                            placeholder="Password" >
+                                            @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                         <input type="submit" class="form-control" name="submit" value="Submit Button">
                                         <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
                                     </form>

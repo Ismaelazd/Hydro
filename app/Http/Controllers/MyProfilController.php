@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\MyProfil;
 use App\User;
 use App\Role;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class MyProfilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::where('id','>',1)->get();
-        return view('viewUsers',compact('users'));
+        $user = Auth::user();
+        $roles = Role::all();
+        return view('myProfil',compact('user','roles'));
     }
 
     /**
@@ -43,10 +46,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\MyProfil  $myProfil
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(MyProfil $myProfil)
     {
         //
     }
@@ -54,22 +57,21 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\MyProfil  $myProfil
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
     {
         $roles = Role::all();
-     
-        return view('user.editUser',compact('user','roles'));
-    
+        $user = Auth::user();
+        return view('user.editMyProfil',compact('user','roles'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\MyProfil  $myProfil
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
@@ -77,37 +79,26 @@ class UserController extends Controller
         $request->validate([
             'name'=> 'required',
             'email'=>'required',
-            'role_id'=>'required',
+            'password'=>'required',
         ]);
-        
-      
+        $user = Auth::user();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->role_id = $request->input('role_id');
+        $user->password = $request->input('password');
+       
         
         $user->save();
-        return redirect()->route('users.index');
+        return redirect()->route('MyProfil.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\MyProfil  $myProfil
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(MyProfil $myProfil)
     {
-    
-        $user->delete();
-        return redirect()->route('users.index');
-    }
-
-    public function search(Request $request){
-        
-        $search = $request->input('search');
-        $users = User::where('id','>',1)->where('name','LIKE', '%'.$search.'%')->get();
-       
-
-        return view('viewUsers',compact('users','search'));
+        //
     }
 }

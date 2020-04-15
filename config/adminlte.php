@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -44,6 +45,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/#63-logo
     |
     */
+    
 
     'logo' => '<b>Admin</b>Ismael',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
@@ -227,51 +229,64 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'My Profil',
+            'url'  => 'MyProfil',
+            'icon' => 'fas fa-address-card',
+        ],
+        [
+            'text' => 'Users',
+            'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'About',
+            'icon'    => 'fas fa-info-circle',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Edit',
                     'url'  => '#',
+                    'icon_color' => 'yellow',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Add',
+                    'url'  => '#',
+                    'icon_color' => 'green',
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'Blog',
+            'icon'    => 'fas fa-info-circle',
+            'submenu' => [
+                [
+                    'text' => 'Edit',
+                    'url'  => '#',
+                    'icon_color' => 'yellow',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Add',
                     'url'  => '#',
+                    'icon_color' => 'green',
                 ],
+                
+            ],
+        ],
+        [
+            'text'    => 'Work',
+            'icon'    => 'fas fa-info-circle',
+            'submenu' => [
+                [
+                    'text' => 'Edit',
+                    'url'  => '#',
+                    'icon_color' => 'yellow',
+                ],
+                [
+                    'text' => 'Add',
+                    'url'  => '#',
+                    'icon_color' => 'green',
+                ],
+                
             ],
         ],
         ['header' => 'labels'],

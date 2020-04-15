@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use Illuminate\Http\Request;
-use App\About;
-use App\Skill;
 
-class WelcomeController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +14,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $about = About::first();
-        $skills = Skill::all();
-        return view('welcome',compact('about','skills'));
-    }
-
-    public function admin(){
-        return view('admin');
+        //
     }
 
     /**
@@ -48,10 +41,10 @@ class WelcomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Blog $blog)
     {
         //
     }
@@ -59,10 +52,10 @@ class WelcomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -71,10 +64,10 @@ class WelcomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -82,10 +75,10 @@ class WelcomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Blog $blog)
     {
         //
     }
