@@ -13,33 +13,25 @@
               <div class="col-md-8 col-sm-8">
                   
                    <!-- CONTACT FORM HERE -->
-                   <form id="contact-form" role="form" action="#" method="post">
+                   <form id="contact-form" role="form" action="{{route('EnvoiMail')}}" method="post">
+                    @csrf
                         <div class="col-md-6 col-sm-6">
-                             <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
+                             <input type="text" class="form-control" placeholder="Name" id="cf-name" name="name" required="">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                             <input type="text" class="form-control" placeholder="Firtstname" id="cf-name" name="firstname" required="">
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                             <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
+                             <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="email" required="">
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                             <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
-                        </div>
-
-                        <div class="col-md-6 col-sm-6">
-                             <select class="form-control" id="cf-budgets" name="cf-budgets">
-                                  <option>Budget Level</option>
-                                  <option>$500 to $1,000</option>
-                                  <option>$1,000 to $2,200</option>
-                                  <option>$2,200 to $4,500</option>
-                                  <option>$4,500 to $7,500</option>
-                                  <option>$7,500 to $12,000</option>
-                                  <option>$12,000 or more</option>
-                             </select>
+                             <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="number" required="">
                         </div>
 
                         <div class="col-md-12 col-sm-12">
-                             <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
+                             <textarea class="form-control" rows="6" placeholder="Your message" id="cf-message" name="message" required=""></textarea>
                         </div>
 
                         <div class="col-md-4 col-sm-12">

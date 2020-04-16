@@ -234,6 +234,11 @@ return [
             'icon' => 'fas fa-address-card',
         ],
         [
+            'text' => 'Color',
+            'url'  => 'color',
+            'icon' => 'fas fa-palette',
+        ],
+        [
             'text' => 'Users',
             'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
@@ -243,8 +248,8 @@ return [
             'icon'    => 'fas fa-info-circle',
             'submenu' => [
                 [
-                    'text' => 'Edit',
-                    'url'  => '#',
+                    'text' => 'Content',
+                    'url'  => 'about/create',
                     'icon_color' => 'yellow',
                 ],
                 [
@@ -260,7 +265,7 @@ return [
             'icon'    => 'fas fa-info-circle',
             'submenu' => [
                 [
-                    'text' => 'Edit',
+                    'text' => 'Content',
                     'url'  => '#',
                     'icon_color' => 'yellow',
                 ],
@@ -277,7 +282,7 @@ return [
             'icon'    => 'fas fa-info-circle',
             'submenu' => [
                 [
-                    'text' => 'Edit',
+                    'text' => 'Content',
                     'url'  => '#',
                     'icon_color' => 'yellow',
                 ],

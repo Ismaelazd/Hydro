@@ -47,3 +47,13 @@ Route::resource('blog','BlogController');
 // Ressources Work
 
 Route::resource('work','WorkController');
+
+// Ressources Color
+
+Route::resource('color','ColorController');
+
+
+// Mail 
+
+Route::get('/mail', 'MailController@index')->name('Mail');
+Route::post('/Envoimail', 'ContactController@store')->name('EnvoiMail');

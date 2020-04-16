@@ -26,6 +26,12 @@ class CreateUsersTable extends Migration
             ->references('id')
             ->onDelete('cascade')
             ->onUpdate('cascade');
+            // $table->bigInteger('color_id')->unsigned()->nullable();
+            // $table->foreign('color_id')
+            // ->on('colors')
+            // ->references('id')
+            // ->onDelete('cascade')
+            // ->onUpdate('cascade');
             $table->timestamps();
         });
     }

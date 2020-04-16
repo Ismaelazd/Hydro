@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\About;
-use App\Skill;
+use App\Mail;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class MailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about = About::first();
-        $skills = Skill::all();
-        return view('welcome',compact('about','skills'));
+        //
     }
 
     /**
@@ -27,9 +24,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        $about = About::first();
-        $skills = Skill::all();
-        return view('about.viewAbout',compact('about','skills'));
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  \App\Mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function show(About $about)
+    public function show(Mail $mail)
     {
         //
     }
@@ -57,10 +52,10 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  \App\Mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function edit(About $about)
+    public function edit(Mail $mail)
     {
         //
     }
@@ -69,10 +64,10 @@ class AboutController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\About  $about
+     * @param  \App\Mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
+    public function update(Request $request, Mail $mail)
     {
         //
     }
@@ -80,10 +75,10 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\About  $about
+     * @param  \App\Mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy(Mail $mail)
     {
         //
     }

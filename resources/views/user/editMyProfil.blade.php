@@ -59,6 +59,7 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="/css/users.css">
+    <link rel="stylesheet" href="/css/app.css">
 @stop
 
 @section('js')
