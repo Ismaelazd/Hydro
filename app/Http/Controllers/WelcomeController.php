@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\About;
 use App\Skill;
+use App\Blog;
+use App\Work;
+use App\User;
 
 class WelcomeController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('admin')->only(['admin']);
+        
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -15,12 +23,16 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+      
         $about = About::first();
         $skills = Skill::all();
-        return view('welcome',compact('about','skills'));
+        $blogs = Blog::all();
+        $works = Work::all();
+        return view('welcome',compact('about','skills','blogs','works'));
     }
 
     public function admin(){
+        
         return view('admin');
     }
 

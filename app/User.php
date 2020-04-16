@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $timestamps = true;
+
     public function role(){
         return $this->belongsTo('App\Role','role_id');   
     }

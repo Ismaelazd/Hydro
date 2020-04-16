@@ -1,6 +1,7 @@
 <?php
 
 
+
 return [
 
     /*
@@ -220,93 +221,28 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'My Profil',
-            'url'  => 'MyProfil',
-            'icon' => 'fas fa-address-card',
-        ],
-        [
-            'text' => 'Color',
-            'url'  => 'color',
-            'icon' => 'fas fa-palette',
-        ],
-        [
-            'text' => 'Users',
-            'url'  => 'users',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text'    => 'About',
-            'icon'    => 'fas fa-info-circle',
-            'submenu' => [
-                [
-                    'text' => 'Content',
-                    'url'  => 'about/create',
-                    'icon_color' => 'yellow',
-                ],
-                [
-                    'text' => 'Add',
-                    'url'  => '#',
-                    'icon_color' => 'green',
-                ],
-                
-            ],
-        ],
-        [
-            'text'    => 'Blog',
-            'icon'    => 'fas fa-info-circle',
-            'submenu' => [
-                [
-                    'text' => 'Content',
-                    'url'  => '#',
-                    'icon_color' => 'yellow',
-                ],
-                [
-                    'text' => 'Add',
-                    'url'  => '#',
-                    'icon_color' => 'green',
-                ],
-                
-            ],
-        ],
-        [
-            'text'    => 'Work',
-            'icon'    => 'fas fa-info-circle',
-            'submenu' => [
-                [
-                    'text' => 'Content',
-                    'url'  => '#',
-                    'icon_color' => 'yellow',
-                ],
-                [
-                    'text' => 'Add',
-                    'url'  => '#',
-                    'icon_color' => 'green',
-                ],
-                
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
-        ],
+        // [
+        //     'text'        => 'pages',
+        //     'url'         => 'admin/pages',
+        //     'icon'        => 'far fa-fw fa-file',
+        //     'label'       => 4,
+        //     'label_color' => 'success',
+        // ],
+        // ['header' => 'account_settings'],
+        
+        // ['header' => 'labels'],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'aqua',
+        // ],
     ],
 
     /*

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Skill;
+use App\About;
 use Illuminate\Http\Request;
+use App\User;
 
 class SkillController extends Controller
 {
@@ -57,7 +59,7 @@ class SkillController extends Controller
      */
     public function edit(Skill $skill)
     {
-        //
+        return view('about.editSkill',compact('skill'));
     }
 
     /**
@@ -69,7 +71,11 @@ class SkillController extends Controller
      */
     public function update(Request $request, Skill $skill)
     {
-        //
+        $skill->name = $request->name;
+        $skill->nombre = $request->nombre;
+        $skill->save();
+        
+        return redirect()->route('about.index');
     }
 
     /**

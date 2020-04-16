@@ -10,61 +10,23 @@
                    </div>
               </div>
 
+              @foreach ($works as $work)
+                  
               <div class="col-md-3 col-sm-6">
                    <!-- WORK THUMB -->
                    <div class="work-thumb">
-                        <a href="images/work-image1.jpg" class="image-popup">
-                             <img src="images/work-image1.jpg" class="img-responsive" alt="Work">
+                        <a href="{{asset('storage/'.$work->img)}}" class="image-popup">
+                             <img src="{{asset('storage/'.$work->img)}}" class="img-responsive" alt="Work">
 
                              <div class="work-info">
-                                  <h3>Clean &amp; Minimal</h3>
-                                  <small>Product Design</small>
+                                  <h3>{{$work->titre}}</h3>
+                                  <small>{{$work->categorie}}</small>
                              </div>
                         </a>
                    </div>
               </div>
+              @endforeach
 
-              <div class="col-md-3 col-sm-6">
-                   <!-- WORK THUMB -->
-                   <div class="work-thumb">
-                        <a href="images/work-image2.jpg" class="image-popup">
-                             <img src="images/work-image2.jpg" class="img-responsive" alt="Work">
-
-                             <div class="work-info">
-                                  <h3>Studio Bag</h3>
-                                  <small>Branding</small>
-                             </div>
-                        </a>
-                   </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6">
-                   <!-- WORK THUMB -->
-                   <div class="work-thumb">
-                        <a href="images/work-image3.jpg" class="image-popup">
-                             <img src="images/work-image3.jpg" class="img-responsive" alt="Work">
-
-                             <div class="work-info">
-                                  <h3>Frame Design</h3>
-                                  <small>Photography</small>
-                             </div>
-                        </a>
-                   </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6">
-                   <!-- WORK THUMB -->
-                   <div class="work-thumb">
-                        <a href="images/work-image4.jpg" class="image-popup">
-                             <img src="images/work-image4.jpg" class="img-responsive" alt="Work">
-
-                             <div class="work-info">
-                                  <h3>Paint Work</h3>
-                                  <small>Art, Design</small>
-                             </div>
-                        </a>
-                   </div>
-              </div>
 
          </div>
     </div>

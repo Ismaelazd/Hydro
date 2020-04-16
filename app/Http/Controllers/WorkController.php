@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Work;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\User;
 
 class WorkController extends Controller
 {
@@ -14,7 +16,8 @@ class WorkController extends Controller
      */
     public function index()
     {
-        //
+        $works = Work::all();
+        return view('work.viewWork',compact('works'));
     }
 
     /**
@@ -24,7 +27,8 @@ class WorkController extends Controller
      */
     public function create()
     {
-        //
+        $works = Work::all();
+        return view('work.addWork',compact('works'));
     }
 
     /**
@@ -35,7 +39,16 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $work = new Work();
+        Storage::disk('public')->delete($work->img);
+        $image=Storage::disk('public')->put('', $request->img);
+
+        $work->img=$image;
+        $work->categorie=$request->input('categorie');
+        $work->titre=$request->input('titre');        
+
+        $work->save();
+        return redirect()->route('work.index');
     }
 
     /**
@@ -57,7 +70,7 @@ class WorkController extends Controller
      */
     public function edit(Work $work)
     {
-        //
+        return view('work.editWork',compact('work'));
     }
 
     /**
@@ -69,7 +82,16 @@ class WorkController extends Controller
      */
     public function update(Request $request, Work $work)
     {
-        //
+        if ($request->hasFile('img')) {
+            Storage::disk('public')->delete($work->img);
+            $image=Storage::disk('public')->put('', $request->img);
+            $work->img=$image;
+        }
+        $work->categorie=$request->input('categorie');
+        $work->titre=$request->input('titre');        
+
+        $work->save();
+        return redirect()->route('work.index');
     }
 
     /**
@@ -80,6 +102,8 @@ class WorkController extends Controller
      */
     public function destroy(Work $work)
     {
-        //
+        Storage::disk('public')->delete($work->img);
+        $work->delete();
+        return redirect()->route('work.index');
     }
 }

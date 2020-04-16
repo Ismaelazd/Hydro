@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\User;
 
 class BlogController extends Controller
 {
@@ -14,7 +16,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::all();
+        
+        return view('blog.viewBlog',compact('blogs'));
     }
 
     /**
@@ -24,7 +28,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $blogs = Blog::all();
+        return view('blog.addBlog',compact('blogs'));
     }
 
     /**
@@ -35,7 +40,16 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blog = new Blog();
+        Storage::disk('public')->delete($blog->img);
+        $image=Storage::disk('public')->put('', $request->img);
+
+        $blog->img=$image;
+        $blog->description=$request->input('description');
+        $blog->titre=$request->input('titre');        
+
+        $blog->save();
+        return redirect()->route('blog.index');
     }
 
     /**
@@ -57,7 +71,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blog.editBlog',compact('blog'));
     }
 
     /**
@@ -69,7 +83,16 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        if ($request->hasFile('img')) {
+            Storage::disk('public')->delete($blog->img);
+            $image=Storage::disk('public')->put('', $request->img);
+            $blog->img=$image;
+        }
+        $blog->description=$request->input('description');
+        $blog->titre=$request->input('titre');        
+
+        $blog->save();
+        return redirect()->route('blog.index');
     }
 
     /**
@@ -80,6 +103,8 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        Storage::disk('public')->delete($blog->img);
+        $blog->delete();
+        return redirect()->route('blog.index');
     }
 }

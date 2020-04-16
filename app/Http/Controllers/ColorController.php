@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Color;
 use Illuminate\Http\Request;
+use App\User;
 
 class ColorController extends Controller
 {
