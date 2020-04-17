@@ -21,6 +21,7 @@ http://www.templatemo.com/tm-509-hydro
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-style.css"> --}}
      <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+
 </head>
 <body>
 

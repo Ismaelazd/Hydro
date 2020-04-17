@@ -15,24 +15,29 @@ class SkillTableSeeder extends Seeder
             
             'name' => 'Web Design',
             'nombre' => 85,
+            'color' => 'primary'
             
         ]);
         DB::table('skills')->insert([
             
             'name' => 'Photography',
             'nombre' => 90,
+            'color' => 'primary'
+
             
         ]);
         DB::table('skills')->insert([
             
             'name' => 'Content Marketing',
             'nombre' => 75,
+            'color' => 'primary'
             
         ]);
         DB::table('skills')->insert([
             
             'name' => 'CMS Admin',
             'nombre' => 70,
+            'color' => 'primary'
             
         ]);
     }

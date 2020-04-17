@@ -23,7 +23,7 @@
                     <strong>{{$skill->name}}</strong>
                     <span class="pull-right">{{$skill->nombre}}%</span>
                          <div class="progress">
-                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{$skill->nombre}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$skill->nombre}}%;"></div>
+                              <div class="progress-bar" role="progressbar" aria-valuenow="{{$skill->nombre}}" aria-valuemin="0" aria-valuemax="100" style="background: {{$skill->color}} !important; width: {{$skill->nombre}}%; "></div>
                          </div>
                     @endforeach
                         

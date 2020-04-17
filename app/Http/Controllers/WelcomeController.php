@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\About;
 use App\Skill;
 use App\Blog;
+use App\Color;
 use App\Work;
 use App\User;
 
@@ -24,11 +25,12 @@ class WelcomeController extends Controller
     public function index()
     {
       
+        $color = Color::find(1);
         $about = About::first();
         $skills = Skill::all();
         $blogs = Blog::all();
         $works = Work::all();
-        return view('welcome',compact('about','skills','blogs','works'));
+        return view('welcome',compact('about','skills','blogs','works','color'));
     }
 
     public function admin(){

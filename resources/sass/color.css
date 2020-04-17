@@ -6,8 +6,8 @@
     border-color: transparent;
 }
 
-.section-btn:hover,
-  .section-btn:focus {
+.orginal:hover,
+  .orginal:focus {
     background: #00F260;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -15,7 +15,7 @@
     color: #393939;
   }
 
-  .overlay {
+  .orginal {
     background: #00F260;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -29,14 +29,14 @@
   }
 
 
-  .blog-info .section-btn:hover {
+  .blog-info .orginal:hover {
     background: #00F260;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ffffff;
   }
 
-  #contact {
+  #orginal {
     background: #00F260;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -183,8 +183,8 @@
     background: linear-gradient(to right, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-color: transparent;
 }
-.section-btn:hover,
-  .section-btn:focus {
+.sea:hover,
+  .sea:focus {
     background: #4e4376;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2b5876, #4e4376);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -192,7 +192,7 @@
     color: #393939;
   }
 
-  .overlay {
+  .sea {
     background: #4e4376;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2b5876, #4e4376);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -206,14 +206,14 @@
   }
 
 
-  .blog-info .section-btn:hover {
+  .blog-info .sea-btn:hover {
     background: #4e4376;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2b5876, #4e4376);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #2b5876;
   }
 
-  #contact {
+  #sea {
     background: #4e4376;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2b5876, #4e4376);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

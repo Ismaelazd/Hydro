@@ -35,6 +35,13 @@
             <div class="alert alert-danger">{{  $message  }}</div>
             @enderror
         </div>
+        <div class="form-group text-darka ">Color :</label> <br>
+            <input value="{{$skill->color}}" type="color" name="color"
+                class="form-control @error('color') is-invalid @enderror"  id="color">
+            @error('color')
+            <div class="alert alert-danger">{{  $message  }}</div>
+            @enderror
+        </div>
         
         <div class="text-center">
 

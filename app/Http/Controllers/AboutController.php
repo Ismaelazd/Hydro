@@ -11,11 +11,7 @@ use App\User;
 
 class AboutController extends Controller
 {
-    public function __construct()
-    {
-        $this->authorizeResource(User::class, 'admin');
-        
-    }
+   
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +19,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $this->authorize('admin',User::class);
+        
         $abouts = About::all();
         $skills = Skill::all();
         return view('about.viewAbout',compact('abouts','skills'));
@@ -36,7 +32,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        $this->authorize('admin',User::class);
+        
         $abouts = About::all();
         $skills = Skill::all();
         return view('about.addAbout',compact('abouts','skills'));
@@ -50,7 +46,7 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('admin',User::class);
+        
         $about = new About();
         Storage::disk('public')->delete($about->img);
         $image=Storage::disk('public')->put('', $request->img);
@@ -82,7 +78,7 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
-        $this->authorize('admin',User::class);
+        
         return view('about.editAbout',compact('about'));
     }
 
@@ -95,7 +91,7 @@ class AboutController extends Controller
      */
     public function update(Request $request, About $about)
     {
-        $this->authorize('admin',User::class);
+        
         if ($request->hasFile('img')) {
             Storage::disk('public')->delete($about->img);
             $image=Storage::disk('public')->put('', $request->img);
@@ -116,7 +112,7 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
-        $this->authorize('admin',User::class);
+        
         Storage::disk('public')->delete($about->img);
         $about->delete();
         return redirect()->route('about.index');

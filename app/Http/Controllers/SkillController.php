@@ -73,6 +73,7 @@ class SkillController extends Controller
     {
         $skill->name = $request->name;
         $skill->nombre = $request->nombre;
+        $skill->color = $request->color;
         $skill->save();
         
         return redirect()->route('about.index');

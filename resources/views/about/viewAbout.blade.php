@@ -43,7 +43,7 @@
                         <strong>{{$skill->name}}</strong>
                         <span class="pull-right mx-3">{{$skill->nombre}}%</span>
                              <div class="progress ">
-                                  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{$skill->nombre}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$skill->nombre}}%;"></div>
+                                  <div class="progress-bar " role="progressbar" aria-valuenow="{{$skill->nombre}}" aria-valuemin="0" aria-valuemax="100" style="background: {{$skill->color}} ; width: {{$skill->nombre}}%; "></div>
                               </div>
                     </div>
                           <a class="text-warning mx-3" title="Edit skill" href="{{route('skill.edit',$skill)}}"><i class="fa-2x fas fa-pencil-alt"></i></a>

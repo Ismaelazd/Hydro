@@ -27,7 +27,6 @@
                                 </li>
                             </ul>
 
-
                             <!-- TAB PANES -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
